@@ -7,13 +7,13 @@ public class Program
     public static void Main(string[] args)
     {
         //Kode Pos
-        //String kelurahan = "Maleer";
-        //String kodePos =  KodePos.GetKodePos(kelurahan);
+        KodePos.Kelurahan SearchLurah = KodePos.Kelurahan.Maleer;
+        String kodePos =  KodePos.GetKodePos(SearchLurah);
 
-        //Console.WriteLine(kodePos);
+        Console.WriteLine(kodePos);
 
 
         //Pintu
-        DoorMachine door = new DoorMachine();
+        //DoorMachine door = new DoorMachine();
     }
 }

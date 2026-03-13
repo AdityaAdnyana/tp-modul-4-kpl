@@ -6,21 +6,21 @@ namespace tpmodul4_103082400005
 {
     internal class KodePos
     {
-        static String[] kelurahan = 
+        public enum Kelurahan 
             {
-            "Batununggal", 
-            "Kujangsari", 
-            "Mengger", 
-            "Wates", 
-            "Cijaura", 
-            "Jatisari", 
-            "Margasari", 
-            "Sekejati", 
-            "Kebonwaru", 
-            "Maleer", 
-            "Samoja"
+            Batununggal, 
+            Kujangsari, 
+            Mengger, 
+            Wates, 
+            Cijaura, 
+            Jatisari, 
+            Margasari, 
+            Sekejati, 
+            Kebonwaru, 
+            Maleer, 
+            Samoja
             };
-        static String[] kodePos = 
+        static readonly String[] kodePos = 
             {
             "40266", 
             "40287", 
@@ -34,21 +34,9 @@ namespace tpmodul4_103082400005
             "40274",
             "40273"
             };
-        public static string GetKodePos(String search)
+        public static string GetKodePos(Kelurahan search)
         {
-            int currentIndex = -1;
-            foreach (String currentLurah in kelurahan)
-            {
-                currentIndex++;
-                if (currentLurah.Equals(search)) break;
-            }
-
-            if (currentIndex < 0 || currentIndex >= kodePos.Length || kelurahan.Equals(search))
-            {
-                return "Not Found";
-            }
-
-            return kodePos[currentIndex];
+            return kodePos[(int)search];
              
         }
     }
