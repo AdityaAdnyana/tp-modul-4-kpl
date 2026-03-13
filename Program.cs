@@ -6,9 +6,14 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        String kelurahan = "Maleer";
-        String kodePos =  KodePos.GetKodePos(kelurahan);
+        //Kode Pos
+        //String kelurahan = "Maleer";
+        //String kodePos =  KodePos.GetKodePos(kelurahan);
 
-        Console.WriteLine(kodePos);
+        //Console.WriteLine(kodePos);
+
+
+        //Pintu
+        DoorMachine door = new DoorMachine();
     }
 }
